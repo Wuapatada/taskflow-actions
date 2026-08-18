@@ -8,11 +8,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Saludo
-        run: echo "Hola desde GitHub Actions"
+      - name: Descargar código
+        uses: actions/checkout@v4
+
+      - name: Ver archivos
+        run: ls -la
 
       - name: Ver sistema operativo
         run: uname -a
 
-      - name: Ver archivos
-        run: ls -la
+      - name: Ver versión de Python
+        run: python --version
+
+      - name: Ver versión de Git
+        run: git --version
