@@ -1,7 +1,7 @@
 function createTask(title) {
     return {
         title: title,
-        completed: true
+        completed: false
     };
 }
 
